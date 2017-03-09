@@ -10,8 +10,10 @@ class Solution(object):
             length = len(prices)
             maxProfit = curProfit = 0
             for i in range(length - 1, 0, -1):
-                curProfit = max(curProfit, curProfit + (prices[i] - prices[i - 1]))
-                maxProfit = max(curProfit, maxProfit)
+                curProfit = max(curProfit,
+                                curProfit + (prices[i] - prices[i - 1]))
+                maxProfit = max(curProfit,
+                                maxProfit)
             return maxProfit
 
 
