@@ -4,19 +4,9 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        nums.sort()
-        if nums[0] != 0:
-            return 0
-        else:
-            first = nums[0]
-            last = nums[len(nums) - 1]
-            if first + len(nums) - 1 == last:
-                return last + 1
-            else:
-                expectSum = (first + last) * (len(nums) + 1) / 2
-                return expectSum - sum(nums)
+        return (0 + len(nums)) * (len(nums) + 1) / 2 - sum(nums)
 
-
+            
 test = Solution()
 print test.missingNumber([1, 2, 3])
 print test.missingNumber([0, 1, 3])
